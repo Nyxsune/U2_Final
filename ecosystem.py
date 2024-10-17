@@ -179,19 +179,20 @@ class Animal:
       elif type(animal) == Fish:
         species = "fish"
 
-      multi_birth = random.uniform(0, 1)
-      if multi_birth <= 0.001:
+      if River.population != River.size**2:
+        multi_birth = random.uniform(0, 1)
+        if multi_birth <= 0.001:
+          River.place_baby(species)
+          River.place_baby(species)
+          print(f"A {species} Had Triplets!")
+        elif multi_birth <= 0.01:
+          River.place_baby(species)
+          print(f"A {species} Had Twins!")
+        else:
+          print(f"New Baby {species}")
         River.place_baby(species)
-        River.place_baby(species)
-        print(f"A {species} Had Triplets!")
-      elif multi_birth <= 0.01:
-        River.place_baby(species)
-        print(f"A {species} Had Twins!")
-      else:
-        print(f"New Baby {species}")
-      River.place_baby(species)
-      self.bred_today == True
-      animal.bred_today == True
+        self.bred_today == True
+        animal.bred_today == True
     else:
       if type(animal) == Bear:
         animal.consume(self, River)

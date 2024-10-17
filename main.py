@@ -21,6 +21,7 @@ def BearFishRiver():
     day += 1
     sleep(3)
     if r.population == RIVER_SIZE**2:
+      print("⚠️ ⚠️ ⚠️  Population Capacity Reached")
       break
 
 
